@@ -1,5 +1,12 @@
 provider "aws" {
   region = var.region
+  default_tags {
+    tags = {
+      Owner_Name = var.owner-name
+      Owner_Email = var.owner-email
+      purpose = var.purpose
+    }
+  }
 }
 
 resource "aws_instance" "zookeeper" {
