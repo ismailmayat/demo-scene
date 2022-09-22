@@ -20,7 +20,7 @@ echo "________Create inventory project________"
 awx projects create --wait \
     --organization Default --name='AWS Infrastructure' \
     --scm_type git --scm_branch='master' \
-    --scm_url $REPO_URL
+    --scm_url 'https://github.com/ismailmayat/demo-scene'
 
 echo "________Create Inventory________"
 awx inventory create \
@@ -38,7 +38,7 @@ awx inventory_sources create \
 echo "________Create Machine Credential from SSH Key________"
 awx credentials create --credential_type 'Machine' \
     --name 'AWS Key' --organization Default \
-    --inputs '{"username": "centos", "ssh_key_data": "@/tmp/id_rsa"}'
+    --inputs '{"username": "ubuntu", "ssh_key_data": "@/tmp/id_rsa"}'
 
 echo "________Create Deployment Job________"
 awx job_templates create \
