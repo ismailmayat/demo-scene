@@ -44,28 +44,28 @@ variable "ami" {
   description = "The AMI to use for the instance."
   # Below amis only work in us-west-2, if you select another region, this MUST be changed with it
   # default = "ami-06f10a38551ed0b61"
-  default = "ami-0d5c7dc1a2fd36a4b" #Ubuntu 16
+  default = "ami-0f29c8402f8cce65c" #Ubuntu 16
   # default = "ami-0b86e06624ac20c42" # Debian stretch
 }
 
 variable "zookeeper_instance_count" {
   description = "EC2 instance count of Zookeeper Nodes"
-  default     = "3"
+  default     = "1"
 }
 
 variable "kafka_instance_count" {
   description = "EC2 instance count of Kafka Brokers"
-  default     = "3"
+  default     = "6"
 }
 
 variable "schema_registry_instance_count" {
   description = "EC2 instance count of Schema Registry instances"
-  default     = "1"
+  default     = "0"
 }
 
 variable "connect_instance_count" {
   description = "EC2 instance count of Connect Nodes"
-  default     = "1"
+  default     = "0"
 }
 
 variable "rest_proxy_instance_count" {
@@ -75,7 +75,7 @@ variable "rest_proxy_instance_count" {
 
 variable "ksql_instance_count" {
   description = "EC2 instance count of KSQL Nodes"
-  default     = "1"
+  default     = "0"
 }
 
 variable "control_center_instance_count" {

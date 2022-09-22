@@ -3,7 +3,7 @@ locals {
 all:
   vars:
     ansible_become: true
-
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     ssl_enabled: true
 
     kafka_broker_custom_listeners:

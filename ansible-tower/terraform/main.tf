@@ -31,6 +31,7 @@ resource "aws_instance" "zookeeper" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "zookeeper-mon-8am-fri-6pm"    
   }
 }
 
@@ -56,6 +57,7 @@ resource "aws_instance" "kafka" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "kafka-mon-8am-fri-6pm"
   }
 }
 
@@ -81,6 +83,7 @@ resource "aws_instance" "schema_registry" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "kafka-mon-8am-fri-6pm"
   }
 }
 
@@ -106,6 +109,7 @@ resource "aws_instance" "connect" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "mon-8am-fri-6pm"
   }
 }
 
@@ -131,6 +135,7 @@ resource "aws_instance" "rest_proxy" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "mon-8am-fri-6pm"
   }
 }
 
@@ -156,6 +161,7 @@ resource "aws_instance" "ksql" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "mon-8am-fri-6pm"
   }
 }
 
@@ -181,5 +187,6 @@ resource "aws_instance" "control_center" {
   tags = {
     unique_identifier = var.unique_identifier
     deployed_with = "cp-ansible-tools"
+    Schedule = "mon-8am-fri-6pm"
   }
 }
